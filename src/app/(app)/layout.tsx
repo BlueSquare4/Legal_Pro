@@ -54,7 +54,7 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
           <SidebarMenu>
             {navItems.map((item) => (
               <SidebarMenuItem key={item.href}>
-                <Link href={item.href} passHref legacyBehavior>
+                <Link href={item.href} passHref>
                   <SidebarMenuButton
                     isActive={pathname === item.href}
                     tooltip={item.label}
@@ -71,7 +71,7 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
           <div className="w-full flex flex-col gap-2">
             <SidebarMenu>
                 <SidebarMenuItem>
-                    <Link href="/settings" passHref legacyBehavior>
+                    <Link href="/settings" passHref>
                     <SidebarMenuButton
                         isActive={pathname === "/settings"}
                         tooltip={"Settings"}
@@ -113,7 +113,7 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
                 <DropdownMenuItem>Billing</DropdownMenuItem>
                 <DropdownMenuItem>Settings</DropdownMenuItem>
                 <DropdownMenuSeparator />
-                 <Link href="/" passHref legacyBehavior>
+                 <Link href="/">
                     <DropdownMenuItem>Log out</DropdownMenuItem>
                 </Link>
               </DropdownMenuContent>
